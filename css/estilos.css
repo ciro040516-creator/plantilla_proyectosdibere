@@ -346,7 +346,7 @@ dotlottie-wc {
 .division2 .fondo1 {
   grid-area: fondo1;
   animation: slide-in-fwd-top 1s linear both;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/foto2.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/edificio.webp.webp");
   /*
   background-repeat: no-repeat;
   background-size: cover;
@@ -378,7 +378,7 @@ dotlottie-wc {
 .division2 .fondo2 {
   grid-area: fondo2;
   animation: slide-in-fwd-bottom 1s linear both;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/foto3.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/flor.webp.webp");
   /*
   background-repeat: no-repeat;
   background-size: cover;
@@ -410,7 +410,7 @@ dotlottie-wc {
 .division2 .fondo3 {
   grid-area: fondo3;
   animation: slide-in-fwd-top 1s linear both;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/foto4.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("img/mesa.webp.webp");
   /*
   background-repeat: no-repeat;
   background-size: cover;
