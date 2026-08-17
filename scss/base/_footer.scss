@@ -4,6 +4,11 @@
 footer{
     background-image: $color-footer;
 
+    ol{
+        list-style: none;
+
+    }
+
     .lista{
         @include flex1(center, space-around);
 
