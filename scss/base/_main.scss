@@ -218,7 +218,7 @@ dotlottie-wc{
 .fondo2{
     grid-area: fondo2;
     animation: slide-in-fwd-bottom 1s linear both;
-    background-image: $color-fondo url("../img/flor.webp");
+    background-image: $color-fondo, url("../img/flor.webp");
     @extend %contenedor-fondo;
     /*
     background-repeat: no-repeat;
@@ -249,8 +249,8 @@ dotlottie-wc{
 .fondo3{
     grid-area: fondo3;
     animation: slide-in-fwd-top 1s linear both;
-    background-image: $color-fondo url("../img/mesa.webp");
-    
+    background-image: $color-fondo, url("../img/mesa.webp");
+
     @extend %contenedor-fondo;
     /*
     background-repeat: no-repeat;
