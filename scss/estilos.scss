@@ -1,0 +1,14 @@
+@use "./utilities/variables";
+@use "./utilities/mixin";
+@use "./utilities/extend";
+
+@use "./pages/index";
+@use "./pages/plantilla2";
+@use "./pages/plantilla3";
+
+@use "./base/reset";
+@use "./base/base";
+@use "./base/header";
+@use "./base/main";
+@use "./componentes/cards";
+@use "./base/footer";

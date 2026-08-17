@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin flex1($align-items, $justify-content){
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex2($flex-direction, $justify-content, $align-items){
+            display: flex;
+            flex-direction: $flex-direction;
+            justify-content: $justify-content;
+            align-items: $align-items;
+}
+
+@mixin mobile{
+    @media (max-width: $med-mobile){
+        @content;
+    }
+}
+
+@mixin mobile-small{
+    @media (max-width: $med-peqmobile){
+        @content;
+    }
+}

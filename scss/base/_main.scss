@@ -1,0 +1,351 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixin' as *;
+@use '../utilities/extend' as *;
+@use '../componentes/cards' as *;
+
+
+h2{
+    font-size: $med-cuarta;
+    margin: $med-terciaria;
+
+    @include mobile{
+            font-size: $med-terciaria;
+            margin: $med-primaria;
+        }
+
+        @include mobile-small{
+            font-size: $med-secundaria;
+        }
+}
+
+details{
+    text-align: $text-align;
+    font-size: $font-text;
+
+    &:active{
+    background-color: $color-details;
+    }
+}
+
+dotlottie-wc{
+    width: 10rem;
+    height: 10rem;
+    
+    @include mobile{
+            max-width: 7rem;
+            max-width: 7rem;
+        }
+
+        @include mobile-small{
+            width: 5rem;
+            height: 5rem;
+        }
+}
+
+.text{
+    font-size: $font-text;
+    @include mobile{
+            font-size: $med-secundaria;
+        }
+
+        @include mobile-small{
+            font-size: 0.8rem;
+        }
+}
+
+.fa-whatsapp, .fa-facebook, .fa-instagram, .fa-envelope{
+    background-image: $color-iconos;
+    font-size: $med-iconos-miniphotos;
+    border-radius: $border-iconos;
+
+    @include mobile{
+            font-size: $med-cuarta;
+        }
+}
+
+.division{
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    grid-template-areas: 90% ;
+    grid-template-areas: "caja1 caja2 caja3";
+    position: relative;
+    margin: $med-primaria;
+
+    @include mobile{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+    .caja1{
+    grid-area: caja1;
+
+    @include mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+        .imagen{
+            @include flex2(column, space-around, center);
+
+            @include mobile{
+                max-width: 10rem;
+                max-height: 10rem;
+            }
+
+            @include mobile-small{
+                max-width: 5rem;
+                max-height: 5rem;
+            }
+
+            width: 20rem;
+            height: 20rem;
+            margin: $med-primaria;
+            border-radius: $border-imagen-photos;
+	        animation: tilt-in-fwd-tl 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            @keyframes tilt-in-fwd-tl {
+            0% {
+            -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+            transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+            opacity: 0;
+            }
+            100% {
+            -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            opacity: 1;
+            }
+            }
+        }
+    }
+
+    .caja2{
+    grid-area: caja2;
+    }
+
+    .caja3{
+    grid-area: caja3;
+
+        .iconos{
+            @include flex2(column, space-around, center);
+
+            @include mobile{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                margin: $med-secundaria;
+            }
+
+            height: 100%;
+            padding: $med-secundaria;
+	        animation: tilt-in-fwd-tr 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+            @keyframes tilt-in-fwd-tr {
+            0% {
+            -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            opacity: 0;
+            }
+            100% {
+            -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            opacity: 1;
+            }
+            }
+        }
+    }
+}
+
+
+/*pagina 2*/
+
+.mini-icon{
+    @include flex1(center, center);
+
+    margin: $med-cuarta;
+    gap: $med-cuarta;
+}
+
+.division2{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "fondo1 fondo2 fondo3";
+    position: relative;
+    margin: $med-primaria;
+    gap: $med-primaria;
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+.fondo1{
+    grid-area: fondo1;
+	animation: slide-in-fwd-top 1s linear both;
+    background-image: $color-fondo, url(/img/edificio.webp.webp);
+    
+    @extend %contenedor-fondo;
+    /*
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 10%;*/
+
+    @include flex2(column, center, center);
+
+    @include mobile{
+        max-width: 80vw;
+        max-height: 80vh;
+    }
+
+@keyframes slide-in-fwd-top {
+    0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+    }
+}
+}
+
+.fondo2{
+    grid-area: fondo2;
+    animation: slide-in-fwd-bottom 1s linear both;
+    background-image: $color-fondo, url(/img/flor.webp.webp);
+    @extend %contenedor-fondo;
+    /*
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 10%;*/
+    @include flex2(column, center, center);
+
+    @include mobile{
+        max-width: 80vw;
+        max-height: 80vh;
+    }
+
+@keyframes slide-in-fwd-bottom {
+    0% {
+    -webkit-transform: translateZ(-1400px) translateY(800px);
+            transform: translateZ(-1400px) translateY(800px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+    }
+}
+}
+
+.fondo3{
+    grid-area: fondo3;
+    animation: slide-in-fwd-top 1s linear both;
+    background-image: $color-fondo, url(/img/mesa.webp.webp);
+    @extend %contenedor-fondo;
+    /*
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 10%;*/
+    @include flex2(column, center, center);
+
+    @include mobile{
+        max-width: 80vw;
+        max-height: 80vh;
+    }
+
+@keyframes slide-in-fwd-top {
+    0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+    }
+}
+}
+}
+
+/*pagina 3- se traslado card a componentes*/
+
+.container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 30% 30% 40%;
+    grid-template-areas:"container1 container2"
+                        "container3 container2"
+                        "container4 container5";
+    position: relative;
+    margin: $med-primaria;
+    gap: $med-primaria;
+    padding: $med-secundaria;
+    height: 90vh;
+
+    @include mobile{
+        grid-template-rows: 20% 40% 20% 20% ;
+        grid-template-areas:"container1 container1"
+                            "container2 container2"
+                            "container4 container3"
+                            "container5 container5";
+    }
+
+.container1{
+    grid-area: container1;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+
+    &:hover .card{
+    transform: rotateY(180deg);
+    }
+}
+
+.container2{
+    grid-area: container2;
+
+    @include flex2(column, center, center);
+
+    background-image: $color-container2;
+
+        .miniphoto{
+            width: $med-iconos-miniphotos;
+            height: $med-iconos-miniphotos;
+            border-radius: $med-iconos-miniphotos;
+            }
+        }
+
+.container3{
+    grid-area: container3;
+    background-image: $color-container3;
+    border-radius: $border-container3;
+}
+
+.container4{
+    grid-area: container4;
+    background-image: $color-container4;
+    border-radius: 10%;
+
+    @include flex1(center, center);
+
+    @include mobile-small{
+        flex-direction: column;
+    }
+        }
+
+.container5{
+    grid-area: container5;
+    background-image: $color-container5;
+}
+}
