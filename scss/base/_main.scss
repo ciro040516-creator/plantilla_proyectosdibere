@@ -54,13 +54,9 @@ dotlottie-wc{
 }
 
 .fa-whatsapp, .fa-facebook, .fa-instagram, .fa-envelope{
-    background-image: $color-iconos;
-    font-size: $med-iconos-miniphotos;
-    border-radius: $border-iconos;
-
-    @include mobile{
-            font-size: $med-cuarta;
-        }
+    &:hover {
+        transform: scale(1.25);
+    }
 }
 
 .division{
@@ -128,6 +124,8 @@ dotlottie-wc{
     grid-area: caja3;
 
         .iconos{
+            color: $color-details ;
+            font-size: $med-iconos-miniphotos;
             @include flex2(column, space-around, center);
 
             @include mobile{
@@ -135,6 +133,10 @@ dotlottie-wc{
                 flex-direction: row-reverse;
                 justify-content: center;
                 margin: $med-secundaria;
+            }
+
+            @include mobile-small{
+                font-size: $med-cuarta;
             }
 
             height: 100%;
@@ -161,10 +163,16 @@ dotlottie-wc{
 /*pagina 2*/
 
 .mini-icon{
+    color: rgba(175, 76, 158, 0.5);
+    font-size: 3rem;
     @include flex1(center, center);
 
     margin: $med-cuarta;
     gap: $med-cuarta;
+
+    @include mobile-small{
+                font-size: $med-cuarta;
+            }
 }
 
 .division2{
@@ -279,7 +287,132 @@ dotlottie-wc{
 }
 }
 
-/*pagina 3- se traslado card a componentes*/
+/*pagina 3- cambios*/
+
+.imgfondo{
+    background-image: url("../img/girasoles.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    @include mobile{
+        background-position: center center;
+        max-width: 100%;
+        height: 60vh;
+    }
+
+    @include mobile-small{
+        background-position: center center;
+        max-width: 100%;
+        height: 50vh;
+    }
+}
+
+
+.title{
+    font-family: "Quicksand", sans-serif;
+    font-size: $med-iconos-miniphotos;
+    text-decoration: $deco-text;
+    margin: $med-primaria;
+    padding:  $med-primaria;
+    color: rgb(155, 132, 3);
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    @include mobile{
+        font-size: 2.5rem;
+    }
+
+    @include mobile-small{
+        font-size: $med-cuarta;
+    }
+    
+    @keyframes slide-in-right {
+    0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    }
+    }
+
+    .quicksand{
+        font-family: "Quicksand", sans-serif;
+    }
+}
+
+
+.textcuadro{
+    font-family: "Quicksand", sans-serif;
+    font-size: $med-terciaria;
+    text-align: right;
+    margin: $med-primaria;
+    padding: $med-secundaria;
+    max-width: 35rem;
+    color: rgb(144, 123, 3);
+
+    @include mobile{
+        font-size: $med-secundaria;
+        max-width: 25rem;
+    }
+
+    @include mobile-small{
+        font-size: 0.8rem;
+        color: black;
+        text-align: center;
+    }
+
+    .quicksand{
+        font-family: "Quicksand", sans-serif;
+    }
+}
+
+.enlaces{
+    text-align: right;
+    font-size: $med-terciaria;
+    align-items: center;
+    margin: $med-secundaria;
+    padding: $med-terciaria;
+    color: gold;
+
+    @include mobile{
+        font-size: $med-secundaria;
+    }
+
+    @include mobile-small{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+.cuadricula{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @include mobile-small{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*pagina 3- se traslado card a componentes  - nueva edicion- cambio de plantilla. 
 
 .container{
     display: grid;
@@ -349,4 +482,4 @@ dotlottie-wc{
     grid-area: container5;
     background-image: $color-container5;
 }
-}
+}*/

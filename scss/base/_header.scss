@@ -65,6 +65,7 @@ ul{
 
     list-style: $list-style;
     font-size: $med-terciaria;
+    margin: $med-secundaria;
 
     & :focus {
     box-shadow: $med-primaria $med-primaria $med-primaria $color-focus;

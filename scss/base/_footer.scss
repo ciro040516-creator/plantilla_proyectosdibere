@@ -1,12 +1,43 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixin' as *;
 
-footer{
-    background-image: $color-footer;
+
+.footer{
+        background-image: $color-footer ;
+        width: 100%;
+
+        @include mobile{
+        max-width: 100%;
+        height: auto;
+        padding: $med-terciaria 0;
+    }
+
+    @include mobile-small{
+        max-width: 100%;
+        height: auto;
+        padding: $med-secundaria 0;
+    }
+    }
+
+.footer3{
+    background-color: rgb(245, 230, 147);
+    width: 100%;
+
+    @include mobile{
+        max-width: 100%;
+        height: auto;
+        padding: $med-secundaria 0;
+    }
+
+    @include mobile-small{
+        max-width: 100%;
+        height: auto;
+        padding: $med-secundaria 0;
+    }
+}
 
     ol{
         list-style: none;
-
     }
 
     .lista{
@@ -15,6 +46,7 @@ footer{
         margin: $med-secundaria;
         gap: $med-primaria;
         font-size: $med-secundaria;
+        font-family: "Quicksand", sans-serif;
         }
 
         @include mobile{
@@ -22,6 +54,21 @@ footer{
             font-size: $med-primaria;
             }
         }
+
+        .lista2{
+        @include flex1(center, space-around);
+        padding: $med-secundaria;
+        gap: $med-primaria;
+        font-size: $med-secundaria;
+
+        @include mobile{
+            font-size: $med-primaria;
+        }
+
+        .quicksand{
+        font-family: "Quicksand", sans-serif;
+    }
+    }
     
     .final{
         font-size: $med-secundaria;
@@ -30,4 +77,3 @@ footer{
             font-size: $med-primaria;
         }
     }
-}
